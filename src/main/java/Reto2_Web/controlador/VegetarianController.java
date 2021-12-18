@@ -4,8 +4,8 @@
  */
 package Reto2_Web.controlador;
 
-import Reto2_Web.servicio.SupplementsService;
-import Reto2_Web.modelo.Supplements;
+import Reto2_Web.servicio.VegetarianService;
+import Reto2_Web.modelo.Vegetarian;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,31 +26,31 @@ import org.springframework.web.bind.annotation.RestController;
  * @author USUARIO
  */
 @RestController
-@RequestMapping("/api/supplements")
+@RequestMapping("/api/vegetarian")
 @CrossOrigin("*")
-public class SupplementsController {
+public class VegetarianController {
        @Autowired
-    private SupplementsService accessoryService;
+    private VegetarianService accessoryService;
        
      @GetMapping("/all")
-    public List<Supplements> getAll() {
+    public List<Vegetarian> getAll() {
         return accessoryService.getAll();
     }
     
     @GetMapping("/{reference}")
-    public Optional<Supplements> getClothe(@PathVariable("reference") String reference) {
+    public Optional<Vegetarian> getClothe(@PathVariable("reference") String reference) {
         return accessoryService.getClothe(reference);
     }
 
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
-    public Supplements create(@RequestBody Supplements gadget) {
+    public Vegetarian create(@RequestBody Vegetarian gadget) {
         return accessoryService.create(gadget);
     }
     
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public Supplements update(@RequestBody Supplements gadget) {
+    public Vegetarian update(@RequestBody Vegetarian gadget) {
         return accessoryService.update(gadget);
     }
 

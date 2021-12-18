@@ -4,8 +4,8 @@
  */
 package Reto2_Web.servicio;
 
-import Reto2_Web.modelo.Supplements;
-import Reto2_Web.repositorio.SupplementsRepositorio;
+import Reto2_Web.modelo.Vegetarian;
+import Reto2_Web.repositorio.VegetarianRepositorio;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,19 +16,19 @@ import org.springframework.stereotype.Service;
  * @author USUARIO
  */
 @Service
-public class SupplementsService {
+public class VegetarianService {
      @Autowired
-    private SupplementsRepositorio clotheRepository;
+    private VegetarianRepositorio clotheRepository;
 
-    public List<Supplements> getAll() {
+    public List<Vegetarian> getAll() {
         return clotheRepository.getAll();
     }
 
-   public Optional<Supplements> getClothe(String reference) {
+   public Optional<Vegetarian> getClothe(String reference) {
         return clotheRepository.getClothe(reference);
     }
 
-    public Supplements create(Supplements accesory) {
+    public Vegetarian create(Vegetarian accesory) {
         if (accesory.getReference() == null) {
             return accesory;
         } else {
@@ -36,10 +36,10 @@ public class SupplementsService {
         }
     }
 
-    public Supplements update(Supplements accesory) {
+    public Vegetarian update(Vegetarian accesory) {
 
         if (accesory.getReference() != null) {
-            Optional<Supplements> accesoryDb = clotheRepository.getClothe(accesory.getReference());
+            Optional<Vegetarian> accesoryDb = clotheRepository.getClothe(accesory.getReference());
             if (!accesoryDb.isPresent()) {
                 
                 if (accesory.getBrand()!= null) {

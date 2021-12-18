@@ -4,38 +4,38 @@
  */
 package Reto2_Web.repositorio;
 
-import Reto2_Web.interfaces.InterfaceSupplements;
-import Reto2_Web.modelo.Supplements;
+import Reto2_Web.modelo.Vegetarian;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import Reto2_Web.interfaces.InterfaceVegetarian;
 
 /**
  *
  * @author USUARIO
  */
 @Repository
-public class SupplementsRepositorio {
+public class VegetarianRepositorio {
     @Autowired
-    private InterfaceSupplements repository;
+    private InterfaceVegetarian repository;
 
-    public List<Supplements> getAll() {
+    public List<Vegetarian> getAll() {
         return repository.findAll();
     }
 
-    public Optional<Supplements> getClothe(String reference) {
+    public Optional<Vegetarian> getClothe(String reference) {
         return repository.findById(reference);
     }
-    public Supplements create(Supplements clothe) {
+    public Vegetarian create(Vegetarian clothe) {
         return repository.save(clothe);
     }
 
-    public void update(Supplements clothe) {
+    public void update(Vegetarian clothe) {
         repository.save(clothe);
     }
     
-    public void delete(Supplements clothe) {
+    public void delete(Vegetarian clothe) {
         repository.delete(clothe);
     }
 }

@@ -5,13 +5,13 @@
 package Reto2_Web.interfaces;
 
 
-import Reto2_Web.modelo.Supplements;
+import Reto2_Web.modelo.Vegetarian;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
  *
  * @author USUARIO
  */
-public interface InterfaceSupplements extends MongoRepository<Supplements, String> {
+public interface InterfaceVegetarian extends MongoRepository<Vegetarian, String> {
     
 }
