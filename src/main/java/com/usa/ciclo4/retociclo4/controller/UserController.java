@@ -53,7 +53,4 @@ public class UserController {
     public Optional<User> getUser(@PathVariable("id") Integer id){
         return userService.getUser(id);
     }
-
-
-
 }
