@@ -1,13 +1,13 @@
-package Reto2_Web;
+package com.usa.ciclo4.retociclo4;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Reto2WebApplicationTests {
+class RetoCiclo4ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
