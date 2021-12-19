@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  * @author USUARIO
  */
-@Document(collection = "vegetarians")
+@Document(collection = "vegetarian")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

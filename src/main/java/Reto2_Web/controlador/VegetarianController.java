@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/vegetarian")
 @CrossOrigin("*")
 public class VegetarianController {
-       @Autowired
+    @Autowired
     private VegetarianService accessoryService;
        
      @GetMapping("/all")
